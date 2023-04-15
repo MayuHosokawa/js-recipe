@@ -9,10 +9,11 @@
   <body>
     <script>
       const fizzBuzz = function (number) {
-        let i
-        for (i = 0; i < number; i += 1) {
+        //let i forの外で使いたいとき困るから let は for 文に入れる
+        for (let i = 0; i < number; i += 1) {
           if (i % 15 == 0) {
             console.log("fizzBuzz")
+            // fizz と Buzz の中に含まれた要素なのではじめに持ってくる
           } else if (i % 3 == 0) {
             console.log("fizz")
           } else if (i % 5 == 0) {
