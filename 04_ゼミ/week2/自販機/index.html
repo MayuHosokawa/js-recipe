@@ -19,6 +19,7 @@
     <section>
       <h3>商品を買う</h3>
       <button id="buy-button-tea">お茶(100円)</button>
+      <button id="buy-button-beer">ビール(150円)</button>
     </section>
     <section>
       <h3>買った商品</h3>
@@ -40,6 +41,7 @@
       const addBotton100 = document.getElementById("add-button-100")
       const displayOtsuri = document.getElementById("display-otsuri")
       const buttonOtsuri = document.getElementById("button-otsuri")
+      const buyButtonBeer = document.getElementById("buy-button-beer")
 
       let saifu = 1000
       let jihankiMoney = 0
@@ -59,6 +61,15 @@
         if (jihankiMoney >= 100) {
           displayItems.textContent = displayItems.textContent + "🍵"
           jihankiMoney -= 100
+          displayJihankiMoney.textContent = jihankiMoney
+          displayOtsuri.textContent = jihankiMoney
+        }
+      }
+
+      buyButtonBeer.onclick = function () {
+        if (jihankiMoney >= 150) {
+          displayItems.textContent = displayItems.textContent + "🍺"
+          jihankiMoney -= 150
           displayJihankiMoney.textContent = jihankiMoney
           displayOtsuri.textContent = jihankiMoney
         }
